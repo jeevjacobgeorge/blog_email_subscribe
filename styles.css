@@ -38,7 +38,7 @@ input[type="email"] {
   padding: 12px;
   font-size: 16px;
   border: none;
-  border-radius: 25px 0 0 25px;
+  border-radius: 15px;
   outline: none;
   width: 70%;
 }
@@ -107,4 +107,31 @@ input[type="email"] {
 /* Hide main content until loading is done */
 #content {
   display: none;
+}
+
+button {
+  background-color: #6d8b95;  /* Primary color */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+button:hover {
+  background-color: #357ABD;  /* Slightly darker color on hover */
+  transform: scale(1.05);     /* Slight grow effect on hover */
+}
+
+button:active {
+  background-color: #2C5A8A;  /* Even darker color on click */
+  transform: scale(1);        /* Reset scale when pressed */
+}
+
+button:focus {
+  outline: none;               /* Remove default focus outline */
+  box-shadow: 0px 0px 0px 4px rgba(74, 144, 226, 0.3); /* Custom focus ring */
 }
