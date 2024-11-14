@@ -1,4 +1,10 @@
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -10,6 +16,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 .container { 
   text-align: center; 
   padding: 40px; 
@@ -19,47 +26,59 @@ body {
   width: 90%;
   color: white;
 }
+
 h1 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 p {
   color: #ccc;
   margin-bottom: 20px;
   font-size: 16px;
 }
+
 .input-group {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 input[type="email"] {
   padding: 12px;
   font-size: 16px;
   border: none;
   border-radius: 15px;
   outline: none;
-  width: 90%;
+  width: 100%;
 }
+
 .subscribe-button {
   padding: 12px 20px;
   font-size: 16px;
   background-color: #ff3d00;
   color: #fff;
   border: none;
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 15px 15px 0;
   cursor: pointer;
 }
-.subscribe-button:hover { background-color: #ff1a00; }
+
+.subscribe-button:hover {
+  background-color: #ff1a00;
+}
+
 .footer-text {
   margin-top: 15px;
   color: #aaa;
   font-size: 14px;
 }
+
 .mailerlite-badge {
   margin-top: 10px;
 }
+
+/* Loading Screen Styling */
 #loading-screen {
   position: fixed;
   top: 0;
@@ -81,7 +100,7 @@ input[type="email"] {
   animation: fadeIn 1.5s ease-in-out infinite;
 }
 
-/* Loading animation styling */
+/* Loading Animation Styling */
 #spinner {
   border: 8px solid #f3f3f3;
   border-top: 8px solid #2e748b;
@@ -92,54 +111,82 @@ input[type="email"] {
   animation: spin 1s linear infinite;
 }
 
-/* Spinner animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Text fade-in animation */
 @keyframes fadeIn {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
 
-/* Hide main content until loading is done */
 #content {
   display: none;
 }
 
+/* Button Styling */
 button {
   width: 90%;
-  background-color: #7199a3;  /* Primary color */
+  background-color: #7199a3;
   color: white;
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
-
   border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-  background-color: #8f8f8f;  /* Slightly darker color on hover */
-  transform: scale(1.05);     /* Slight grow effect on hover */
+  background-color: #8f8f8f;
+  transform: scale(1.05);
 }
 
 button:active {
-  background-color: #2C5A8A;  /* Even darker color on click */
-  transform: scale(1);        /* Reset scale when pressed */
+  background-color: #2C5A8A;
+  transform: scale(1);
 }
 
 button:focus {
-  outline: none;               /* Remove default focus outline */
-  box-shadow: 0px 0px 0px 4px rgba(74, 144, 226, 0.3); /* Custom focus ring */
+  outline: none;
+  box-shadow: 0px 0px 0px 4px rgba(74, 144, 226, 0.3);
 }
-form{
+
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap:12px;
+  gap: 12px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .subscribe-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
 }
