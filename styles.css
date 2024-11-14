@@ -40,7 +40,7 @@ input[type="email"] {
   border: none;
   border-radius: 15px;
   outline: none;
-  width: 70%;
+  width: 90%;
 }
 .subscribe-button {
   padding: 12px 20px;
@@ -110,11 +110,13 @@ input[type="email"] {
 }
 
 button {
-  background-color: #6d8b95;  /* Primary color */
+  width: 90%;
+  background-color: #7199a3;  /* Primary color */
   color: white;
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
+
   border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -122,7 +124,7 @@ button {
 }
 
 button:hover {
-  background-color: #357ABD;  /* Slightly darker color on hover */
+  background-color: #8f8f8f;  /* Slightly darker color on hover */
   transform: scale(1.05);     /* Slight grow effect on hover */
 }
 
@@ -134,4 +136,10 @@ button:active {
 button:focus {
   outline: none;               /* Remove default focus outline */
   box-shadow: 0px 0px 0px 4px rgba(74, 144, 226, 0.3); /* Custom focus ring */
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap:12px;
 }
