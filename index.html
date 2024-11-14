@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Self Improvement Blog Subscription</title>
 <link rel="stylesheet" href="styles.css">
-  <!-- MailerLite Universal -->
-  <script>
-      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-      ml('account', '1189243');
-  </script>
+
+  
 </head>
 <body>
+      <div id="loading-screen">
+            <h1>Your path to improvement has started...</h1>
+            <div id="spinner"></div>
+      </div>
   <div class="container">
     <h1>Self Improvement Blog.</h1>
     <p>Subscribe to my mailing list to get a blog link once a week.</p>
@@ -921,6 +919,16 @@
   
   
   <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '1189243');
+          // Simulate loading process
+      window.addEventListener('load', function() {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+      });
     function ml_webform_success_19815480() {
       var $ = ml_jQuery || jQuery;
       $('.ml-subscribe-form-19815480 .row-success').show();
